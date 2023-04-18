@@ -58,17 +58,19 @@
       <div class="row">
               <img class="card-img-top" src="images/map (1).png" alt="">
               <a class="nav-link" href="files/ferryflows.json">Ferry_Flows_json_data</a>
-         <p class="card-text">Questions to answer in the PDF file:
+         <p class="card-text">Map Design:
+           My flow map design was determine by the best possible way to depict the location of ferry ports (terminals) and the flows between them in Alaska. I chose the ESRI typolographical basemap instead of choropleth polygons as the background as this gave the best understanding of the typography of the region including mountains and island landscapes.
+The point symbols are represented using proportional symbols of number of trips per year. I also classed these into three quantile classes and assigned a sequential color scheme of blue to make this raw count easier to see and comparable to the legend.
+To represent the flows themselves, I chose the curved with half-arrow flow line style. This allows for the directionality to be represented also accounting for readability and cluttering concerns.
+Flow line thickness was set to be quantile with 4 classes to represent the average vehicles and passenger counts per vessel. I also chose to use a divergent color scheme for these classes to allow for the two low classes of avgerage vehicles nad passengers and the two high classes to be easily seen.
+The flows, I wanted to normalize by the number of vessels that travel each route. So I wanted to see how many vehicles and passengers typically were on a vessel. To build a more complete picture of ferry travel, I wanted to depict the number of trips that are taken in the year. This would help build the story of where are a lot of trips coming from and how many passengers are taking these trips. Typically, there are many more trips being taken for shorter paths (between adjacent islands especially in the Juneau region). To limit the cluttering and overlapping as much as possible, I limited the number of flows to 150 flows.
 
-1. Justification of your flow map design.
-Please refer to the references to justify your choice of flow map symbology, including the point symbols, flow symbols, and the background choropleth map. Justify the choice of your node, flow and choropleth symbology, which should be different than the maps published in FlowMapper article and the tutorial video.
-Your flow map should include a title, a proper legend, and other necessary elements if applicable.
-Fill and outline colors should be carefully selected to enhance the reading of the flow map.
-Try to limit the visual clutter produced by overlapping flow lines by carefully adjusting the show top flows option on Flow Symbology.
-2. Interpretation of flow patterns. Discuss:
-Places that attract (receive) the most flows, and the places that send the most flows,
-General direction of flows (e.g., north-south, east-west, etc.) with context to the geography of the flow data set.
-Flow patterns in relation to location characteristics displayed by node symbol and choropleth base map.
+<p class="card-text">Interpretation of flow patterns:
+Places that attract (receive) the most flows = terminal id 43 that corresponds to
+ and the places that send the most flows,
+The flows are generally moving around the capital of Juneau, Alaska and the ports around Anchorage, Alaska. These are typically more populated areas in Alaska and have several ports in towns around them.
+These ferries are typically used to allow for a cheaper means of traveling (than flying) to these major cities or other towns/islands from these more remote locations. These flows represent these ferries as a way of extending travel where road networks do not exists. This may explain why the flows are bi-directional with few having higher classes of one direction of travel to or form a terminal.
+
  </p>
       </div>
       <!-- /.row -->
@@ -78,7 +80,7 @@ Flow patterns in relation to location characteristics displayed by node symbol a
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-4 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Caitlyn Grubbs 2023</p>
       </div>
