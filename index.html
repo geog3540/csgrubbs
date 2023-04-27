@@ -1,164 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>Coordinated Multivariate Visualization</title>
+    <title> Caitlyn's Portfolio </title>
 
-  <!-- Bootstrap Core CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- import JQuery and Bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
 
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
-  <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+  </head>
 
-  <!-- D3.js -->
-  <link rel="stylesheet" href="css/d3.parcoords.css">
-  <script src="https://d3js.org/d3.v3.min.js"></script>
-  <!-- D3 legend to make it easier -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.js"></script>
-  <script src="js/d3.parcoords.js"></script>
-  <script src="js/colorbrewer.js"></script>
+  <body>
 
-</head>
-
-<body>
-
-  <nav class="navbar navbar-default">
-    <div class="container container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-        <a class="navbar-brand" href="https://csgrubbs.github.io/Midwest_medical_providers/">Midwest Medical Provider Changes</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="https://clas.uiowa.edu/geography/people/caitlyn-grubbs">Caitlyn Grubbs's Portfolio of Geovisualizations</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shortbio.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="files/CV_Grubbs.pdf">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:caitlyn-grubbs@uiowa.edu">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="defaultNavbar1">
-        <ul class="nav navbar-nav">
+    </nav>
 
-          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="shortbio.html">About</a></li>
-              <li><a href="files/CV_Grubbs.pdf">Resume</a></li>
-              <li class="divider"></li>
-              <li><a href="mailto:caitlyn-grubbs@uiowa.edu">Contact</a></li>
-            </ul>
-          </li>
-        </ul>
+    <!-- Page Content -->
+    <div class="container">
 
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
+      <!-- Page Heading -->
+      <h1 class="my-4">Geovisualizations Portfolio:
+        <small>GEOG 5540</small>
+      </h1>
 
-  <div style="height:0px;" id="info-label" class="col-md-6 portfolio-item"></div>
-
-  <!-- Page Content -->
-  <div class="container">
-
-    <!-- Page Header -->
-
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="row panel-header">
-          <div class="col-lg-12">
-            <h1 class="page-header">Parallel Coordinates Plot</h1>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://observablehq.com/d/72c452ce83f06bd5"><img class="card-img-top" src="images/choropleth.png" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://observablehq.com/d/72c452ce83f06bd5">Rural Residents in Ohio Counties</a>
+              </h4>
+              <p class="card-text">Using manual breaks to get four equal spaced classes of 0.25 of the proportion of residents who are rural in Ohio, shows that there are higher proportions of rural residents in southern and north western Ohio. The north east and south west have lower proportions of rural residents. Ohio is known for having large amounts of rural residents except in its major cities of Cleveland, Cincinnati, and Columbus. This helps explain some of the distribution that a lot of the state has higher proportions of rural residents. </p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-9">
-            <!-- Change the map description below-->
-            <p>The map you're looking at displays the world's age distributions in a multivariate manner. I was inspired by the somehwat-common
-              <a href="http://cdn.static-economist.com/sites/default/files/20110514_WOC726.gif">population prymaids</a>
-              from various sources online. Unfortunately while the prymaid allows you a finer grained analysis,
-              the form doesn't lend itself to integrating more than one country at a time.
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://observablehq.com/d/86e5cf3d0abfbda9"><img class="card-img-top" src="images/proportionalSymbols.png" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://observablehq.com/d/86e5cf3d0abfbda9">Residents under the age of 5 for major cities in the United States</a>
+              </h4>
+              <p class="card-text">When examining the proportional symbol map of the number of residents under the age of 5 years old for each major city, it is clear to see that this follows a pattern of the cities with the largest populations. New York, NY clearly has the largest number of residents under the age of 5, followed by very large cities such as Los Angeles and Chicago. The major cities of Texas including Houston, San Antonio, Austin and Dallas also register as having large number of residents under the age of 5 compared to the other major cities across the US. It is worth noting that this is a raw count of the number of residents under the age of 5 per the census data so it makes sense that it matches along with the population size of major cities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://observablehq.com/d/6d3f17ce76f01339"><img class="card-img-top" src="images/chart (2).png" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://observablehq.com/d/6d3f17ce76f01339">Proportion of Female Medical Providers Across Iowa Zipcodes</a>
+              </h4>
+              <p class="card-text">This bivariate map does not show any obvious spatial patterns across the zip codes of Iowa, however, there are a lot of zip codes that fall into the "high" range of providers (this does not mean that a lot of providers work in this zip code, it may indicate that the population is fairly small in that region and adding one provider changes the rate dramatically). There is some clumping of high-high in the north east, around the west side of Des Moines and there are three obvious zip codes that fall into the mid-mid category.of the zip codes that had providers, the mid-low zip codes fall around the north west part of Des Moines. And a few zip codes to the south east of Des Moines. There are no zip codes that fall into the low-low category. If a county had a very small count of providers and even one was female, it would change the percentage a lot and may place that county into a different category. Also, if a zip code had so few providers, it would count as zero and would appear on this map as black since you can't have a female percent without a provider.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://geog3540.github.io/csgrubbs/flowmapping.html"><img class="card-img-top" src="images/map (1).png" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://geog3540.github.io/csgrubbs/flowmapping.html">Vehicle and Passenger Ferry Travel in Alaska</a>
+              </h4>
+              <p class="card-text">This map shows the quantile classification of flows of the ferry routes for their average numberr of vehicles and passengers per vessel. The proportional symbols depict the number of trips that leave that terminal each year. Since there are many islands in this region of Alaska it makes sense that there are a lot of ferry terminals/ports that flow between them. The majority of these are around Anchorage and Jeaunu as these are the most populous areas in this region.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://observablehq.com/d/6855f89887303bc9"><img class="card-img-top" src="images/choropleth_23.png" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://observablehq.com/d/6855f89887303bc9">Choropleth Map of Iowa Medical Providers by Zipcode</a>
+              </h4>
+              <p class="card-text">This map is a cloropleth map of zip codes in Iowa showing the proportion of providers per 1,000 persons standardized by population size of the city in 2023. I used natural breaks here.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="https://observablehq.com/d/6855f89887303bc9"><img class="card-img-top" src="images/proportionalSymbols_23.png" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="https://observablehq.com/d/6855f89887303bc9">Proportional Symbols Providers in Major Cities of Iowa in 2023</a>
+              </h4>
+              <p class="card-text">This map is a proportional symbol map of major cities in Iowa showing the proportion of providers per 1,000 persons standardized by population size of the city in 2023. I used counties as the basemap for reference. This map was used for exploration of how some of these major cities compare to each other.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
 
-              The parallel coordinates and map combination neatly follows Scheiderman's mantra.</p>
-              <ul>
-                <li>P.C. enables you (the user) an <b>overview</b> of <i>all</i> the data. Over 140 countries are depicted, instead of the P.P.'s 1.
-                  Immediately you can see the anamalous spikes from African countries high child population.</li>
-                  <li>There are three primary points of interaction; brushing P.C. axes, the dropdown attribute selection, and the map hovering.
-                    Each of them aid in assisting the user to get the data they <i>need</i> by <b>zooming and filtering</b> the data.</li>
-                    <li>The map tooltip interaction allows precise information, thus serving as a proxy for <b>details on demand</b>.</li>
-                  </ul>
+      <!-- Pagination -->
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
 
-                  <!-- Change the map interpretation below-->
-                  <p>Overall, the world's population distribution has very clear trends: developed nations have a much more balanced distribution,
-                    if not skewed toward older groups. Undeveloped nations are bottom heavy, with a lot of children.
-                    The data was taken from the World Bank's Health Nutrition and Population Statistics estimates 2015 survey data.
-                    Some countries are incomplete, and will be greyed out. All of the data has been normalized,
-                    so the values you see at the bottom are the portions of the country whose population is made up of that age group.</p>
-                  </div>
-                  <div class="col-lg-2">
-                    <div class="row">
-                      <div id="dropdown"></div>
-                      <br><br>
-                      <svg id ="legend">
-                      </svg>
-                    </div>
+    </div>
+    <!-- /.container -->
 
-                  </div>
-                  <!-- /.row -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Caitlyn Grubbs 2023</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 
-                  <!-- /.row -->
-                  <!-- Projects Row -->
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="col-md-12 portfolio-item">
-                        <div id="map"/>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /.row -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                  <br style="margin-top:10px;">
+  </body>
 
-                  <!-- Projects Row -->
-                  <div class="row">
-                    <div class="col-lg-12 portfolio-item">
-                      <div class="col-md-12 portfolio-item">
-                        <div id="pcp" class="parcoords"/>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <p><b>Changes:</b> Mouseover now highlights the parallel coordinate plot! Some minor formatting tweaks otherwise.</p>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div><!-- /.container -->
-
-            <hr>
-            <br>
-
-            <!-- Footer -->
-            <footer>
-              <div class="row">
-                <div class="col-lg-12 text-center">
-                  <p>Copyright &copy; Ryan Larson & Caglar Koylu 2020</p>
-                </div>
-              </div>
-              <!-- /.row -->
-            </footer>
-
-            <!--link to main JavaScript file-->
-            <script src="js/main.js"></script>
-
-          </body>
-
-          </html>
+</html>

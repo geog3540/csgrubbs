@@ -57,6 +57,7 @@
 
       <div class="row">
               <img class="card-img-top" src="images/map (1).png" alt="">
+<<<<<<< HEAD
               <a class="nav-link" href="files/ferryflows.json">Ferry_Flows_json_data</a>
          <p class="card-text">Map Design:
            My flow map design was determine by the best possible way to depict the location of ferry ports (terminals) and the flows between them in Alaska. I chose the ESRI typolographical basemap instead of choropleth polygons as the background as this gave the best understanding of the typography of the region including mountains and island landscapes.
@@ -69,6 +70,21 @@ The flows, I wanted to normalize by the number of vessels that travel each route
 Places that attract (receive) the most flows = terminal id 43 that corresponds to
  and the places that send the most flows,
 The flows are generally moving around the capital of Juneau, Alaska and the ports around Anchorage, Alaska. These are typically more populated areas in Alaska and have several ports in towns around them.
+=======
+              <h4 class="card-title">Flow Data:
+              </h4>
+              <a class="nav-link" href="files/ferryflows.json">Ferry_Flows_json</a>
+
+<p class="card-text">Map Design: My flow map design was determine by the best possible way to depict the location of ferry ports (terminals) and the flows between them in Alaska. I chose the ESRI typolographical basemap instead of choropleth polygons as the background as this gave the best understanding of the typography of the region including mountains and island landscapes.
+The point symbols are represented using proportional symbols of number of trips per year. I also classed these into three quantile classes and assigned a sequential color scheme of blue to make this raw count easier to see and comparable to the legend.
+To represent the flows themselves, I chose the curved with half-arrow flow line style. This allows for the directionality to be represented also accounting for readability and cluttering concerns.
+Flow line thickness was set to be quantile with 4 classes to represent the average vehicles and passenger counts per vessel. I also chose to use a divergent color scheme for these classes to allow for the two low classes of avgerage vehicles nad passengers and the two high classes to be easily seen.
+The flows, I wanted to normalize by the number of vessels that travel each route. So I wanted to see how many vehicles and passengers typically were on a vessel. To build a more complete picture of ferry travel, I wanted to depict the number of trips that are taken in the year. This would help build the story of where are a lot of trips coming from and how many passengers are taking these trips. Typically, there are many more trips being taken for shorter paths (between adjacent islands especially in the Juneau region). To limit the cluttering and overlapping as much as possible, I showed 259 flows because we miss vital information about the flows with the highest average vehicles and passenger per vessel as well as the terminal with the highest number of trips without mapping them all.</p>
+
+<p class="card-text">Interpretation of flow patterns:
+The places that receive the most flows is terminal id 43 which corresponds to the terminal at Juneau, Alaska. The terminal that sends the most ferrys is located at Juneau and Anchorage.
+The town with the highest average vehicle and passengers per vessel is located at Yakutat, which makes sense since it is a pretty common tourist destination and has a lot of travelers to and from Juneau. The terminal with the highest trips per year is located at Haines, which also makes sense since it mostly sends and receives ferries from Skagway and this may be a smaller vessel that goes frequently back and forth between the towns since Haines is an island and Skagway starts the Klondike highway that is a major roadway that crosses into Canada. The flows are generally moving around the capital of Juneau, Alaska and the ports around Anchorage, Alaska. These are typically more populated areas in Alaska and have several ports in towns around them.
+>>>>>>> parent of 0d58eef (new)
 These ferries are typically used to allow for a cheaper means of traveling (than flying) to these major cities or other towns/islands from these more remote locations. These flows represent these ferries as a way of extending travel where road networks do not exists. This may explain why the flows are bi-directional with few having higher classes of one direction of travel to or form a terminal.
 
  </p>
