@@ -118,8 +118,8 @@
 	// TODO: Change the variables below to customize the small multiples interface for your data
 	var polygonJSONFile = '../smallmultiples/data/midwest_rates.geojson'
 	// change the projection if needed *d3.geoAlbers()*
-	// var projection = d3.geoAlbers();
-	var projection = d3.geoTransverseMercator();
+	var projection = d3.geoAlbers();
+	// var projection = d3.geoTransverseMercator();
 	var widthheightRatio = 0.7;
 	// Relative placement of legend that ranges between 0 and 1.
 	// 0 is the start, whereas 1 i the end of each panel.
@@ -131,7 +131,7 @@
 	var idAttribute = 'FIPS', nameAttribute = 'NAME';
 
 	// Find the abbreviations of color names from https://colorbrewer2.org/
-	var colors =  colorbrewer.Greens;
+	var colors =  colorbrewer.BuGn;
 
 	// Chart/map attributes (variables) and formats based on the divs defined above
 	// For attribute 1 (the same for all others), see the description of the parameters below.
@@ -453,7 +453,7 @@
 						var tip = d.map + '-tooltip';
 
 						map.select(('.polygon'+id))
-						.style('stroke', "black")
+						.style('stroke', "#dadada")
 						.style('opacity', '0.85');
 						// map tooltip
 						d3.select(tip)
