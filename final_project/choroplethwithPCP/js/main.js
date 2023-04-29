@@ -1,5 +1,5 @@
 
-var polygonJSONFile = "data/midwest_rates.geojson";
+var polygonJSONFile = "data/rates_uninsured_years/rates_uninsured_all_2015.geojson";
 
 //change the center of your map in setView
 var centerLatitude = 45.3, centerLongitude = -92.3;
@@ -15,8 +15,8 @@ var colors = colorbrewer.PuRd;
 var key = "NAME";
 
 //TODO: change the attribute names to be included in the parallel coordinate plot
-var attNames = ["all_rate", "mddo_rate", "nppa_rate", "population", "white", "black", "hispanic", "pct_male",
-"pct_female", "med_age"];
+var attNames = ["all_rate", "MDDO_rate", "NPPA_rate", "pct_uninsured", "pop_sqmi", "pct_white", "pct_black", "pct_ hispanic", "pct_male",
+"pct_female", "median_age"];
 var attLegendFormat = ".1f"
 
 // This string is appended in front of the attribute name to make age groups descriptive
