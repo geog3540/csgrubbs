@@ -15,7 +15,7 @@ var colors = colorbrewer.PuRd;
 var key = "NAME";
 
 //TODO: change the attribute names to be included in the parallel coordinate plot
-var attNames = ["all_rate", "MDDO_rate", "NPPA_rate", "pct_uninsu", "population", "pct_white", "pct_black", "pct_ hispan", "pct_male",
+var attNames = ["all_rate", "MDDO_rate", "NPPA_rate", "pct_uninsu", "population", "pct_white", "pct_black", "pct_hispan", "pct_male",
 "pct_female", "median_age"];
 var attLegendFormat = ".1f"
 
