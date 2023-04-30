@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
-	<title>Linked Small Multiple Maps of Percent Change of Providers from 2015 - 2023</title>
+	<title>Linked Small Multiple Maps of Percent Change of NPs and PAs from 2015 - 2023</title>
 
 	<!-- CSS -->
 	<!-- Bootstrap -->
@@ -53,7 +53,7 @@
 	<div class="container">
 		<div class="content">
 			<div class="row">
-					<h1>Percent Change of Medical Providers</h1>
+					<h1>Percent Change of Midlevel Medical Practitioner</h1>
 			</div>
 			<hr />
 			<div class="row">
@@ -116,7 +116,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = '../smallmultiplespctchange/data/pct_change.geojson'
+	var polygonJSONFile = '../smallmultiplespctchange_NPs/data/pct_change.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
 	// var projection = d3.geoTransverseMercator();
@@ -140,10 +140,10 @@
 	// att1format: enter the d3.format string to display the variables in the format you like
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
-	var att1 = 'pct_change_all_17', att1alias = 'Percent of change for all providers', att1format = '.1f',
-	att2 = 'pct_change_all_19', att2alias =  'Percent of change for all providers', att2format = '.1f',
-	att3 = 'pct_change_all_21', att3alias = 'Percent of change for all providers', att3format = '.1f',
-	att4 = 'pct_change_all_23', att4alias = 'Percent of change for all providers', att4format = '.1f';
+	var att1 = 'pct_change_nppa_17', att1alias = 'Percent of change for all providers', att1format = '.1f',
+	att2 = 'pct_change_nppa_19', att2alias =  'Percent of change for all providers', att2format = '.1f',
+	att3 = 'pct_change_nppa_21', att3alias = 'Percent of change for all providers', att3format = '.1f',
+	att4 = 'pct_change_nppa_23', att4alias = 'Percent of change for all providers', att4format = '.1f';
 
   // enter below all variables that should be normalized. If you would like to multiple the variables
 	// with a constant value enter them in multiplyBy array. If there is no need for multiplication,
