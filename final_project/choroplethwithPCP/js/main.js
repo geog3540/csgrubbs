@@ -141,7 +141,7 @@ function createDropdown(jsonData){
   //add a select element for the dropdown menu
   var dropdown = d3.select("#dropdown")
   .append("div")
-  .html("<h4>Select Age Group: </h4>")
+  .html("<h4>Select Demographic Variable: </h4>")
   .append("select")
   .on("change", function(){ changeAttribute(this.value, jsonData) }); //changes expressed attribute
 
