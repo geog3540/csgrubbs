@@ -57,12 +57,13 @@
 			</div>
 			<hr />
 			<div class="row">
+				<div class="col-lg-9">
+				<!-- Change the map description below-->
+				<p>The following three maps show show the percent change of all medical providers (MD, DO, NP, and PAs) over 2 year intervals by county. </p>
+			</div>
 				<div class="col-sm-4">
 					<p>Data from <a href="data.cms.gov">Data.CMS.gov</a>, maps by Caitlyn Grubbs.</p>
-					<div class="col-lg-9">
-					<!-- Change the map description below-->
-					<p>The following three maps show show the percent change of medical providers (MD, DO, NP, and PAs) over 2 year intervals by county. </p>
-				</div>
+					</div>
 			</div>
 				<div class='col-sm-8 mapButtons'>
 					<span class="pull-right">
@@ -144,10 +145,10 @@
 	// att1format: enter the d3.format string to display the variables in the format you like
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
-	var att1 = 'all_pct_change_updated_horizontal_pct_change_all17', att1alias = 'Percent of change for all providers from 2015 to 2017', att1format = '.2f',
-	att2 = 'all_pct_change_updated_horizontal_pct_change_all19', att2alias =  'Percent of change for all providers from 2017 to 2019', att2format = '.2f',
-	att3 = 'all_pct_change_updated_horizontal_pct_change_all21', att3alias = 'Percent of change for all providers from 2019 to 2021', att3format = '.2f',
-	att4 = 'all_pct_change_updated_horizontal_pct_change_all23', att4alias = 'Percent of change for all providers from 2021 to 2023', att4format = '.2f';
+	var att1 = 'all_pct_change_updated_horizontal_pct_change_all17', att1alias = 'Percent of change for all providers from 2015 to 2017', att1format = '.1f',
+	att2 = 'all_pct_change_updated_horizontal_pct_change_all19', att2alias =  'Percent of change for all providers from 2017 to 2019', att2format = '.1f',
+	att3 = 'all_pct_change_updated_horizontal_pct_change_all21', att3alias = 'Percent of change for all providers from 2019 to 2021', att3format = '.1f',
+	att4 = 'all_pct_change_updated_horizontal_pct_change_all23', att4alias = 'Percent of change for all providers from 2021 to 2023', att4format = '.1f';
 
   // enter below all variables that should be normalized. If you would like to multiple the variables
 	// with a constant value enter them in multiplyBy array. If there is no need for multiplication,
@@ -176,7 +177,7 @@
 	var chartWidth = d3.select('#divMap1')
 	.node().getBoundingClientRect().width,
 	chartHeight = chartWidth * widthheightRatio;
-	var margin = {top: 10, right: 20, bottom: 10, left:20},
+	var margin = {top: 13, right: 20, bottom: 10, left:20},
 	width = chartWidth - margin.right - margin.left,
 	height = chartHeight - margin.top - margin.bottom,
 	histHeight = (chartHeight * .25);
