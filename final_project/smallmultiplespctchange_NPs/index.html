@@ -116,7 +116,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = '../smallmultiplespctchange_NPs/data/pct_change.geojson'
+	var polygonJSONFile = '../smallmultiplespctchange/data/pct_change_updated_horizontal.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
 	// var projection = d3.geoTransverseMercator();
@@ -140,15 +140,15 @@
 	// att1format: enter the d3.format string to display the variables in the format you like
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
-	var att1 = 'pct_chan_2', att1alias = 'Percent of change for midlevel providers (NPs and PAs)', att1format = '.2f',
-	att2 = 'pct_chan_5', att2alias =  'Percent of change for midlevel providers (NPs and PAs)', att2format = '.2f',
-	att3 = 'pct_chan_8', att3alias = 'Percent of change for midlevel providers (NPs and PAs)', att3format = '.2f',
-	att4 = 'pct_cha_11', att4alias = 'Percent of change for midlevel providers (NPs and PAs)', att4format = '.2f';
+	var att1 = 'all_pct_change_updated_horizontal_pct_change_nppa17', att1alias = 'Percent of change for NPs and PAs from 2015 to 2017', att1format = '.2f',
+	att2 = 'all_pct_change_updated_horizontal_pct_change_nppa19', att2alias =  'Percent of change for NPs and PAs from 2017 to 2019', att2format = '.2f',
+	att3 = 'all_pct_change_updated_horizontal_pct_change_nppa21', att3alias = 'Percent of change for NPs and PAs from 2019 to 2021', att3format = '.2f',
+	att4 = 'all_pct_change_updated_horizontal_pct_change_nppa23', att4alias = 'Percent of change for NPs and PAs from 2021 to 2023', att4format = '.2f';
 
-  // enter below all variables that should be normalized. If you would like to multiple the variables
+	// enter below all variables that should be normalized. If you would like to multiple the variables
 	// with a constant value enter them in multiplyBy array. If there is no need for multiplication,
 	// simply enter 1 for each value in multiplyBy.
-  // var attributesToBeNormalized = [att1, att4];
+	// var attributesToBeNormalized = [att1, att4];
 	// var multiplyBy = [10000, 100];
 	// var divideBy = ['Population', 'Population'];
 	// if your variables are not raw counts and they are already normalized, comment out above, and
@@ -253,16 +253,16 @@
 				d3.select(d.btn).on('click', function() {
 					d3.selectAll('.btn').classed('active', false);
 					d3.select(this).classed('active', true);
-					var buttonid = d3.select(this).node().id;
-					if(buttonid == "ckmButton"){
-						$(".container").fadeOut(200);
-						functionAlert("Maps cannot be compared visually when natural breaks classification is selected. " +
-					  "Because natural breaks focuses on the recise distribution of each attribute along the number line.");
-					}else if(buttonid == "eqIntButton"){
-						$(".container").fadeOut(200);
-						functionAlert("When equal interval classification is selected, all maps should be"
-						+ " in the same scale (e.g., percentage) and have the same range (min-max values) to be comparable.");
-					}
+					// var buttonid = d3.select(this).node().id;
+					// if(buttonid == "ckmButton"){
+					// 	$(".container").fadeOut(200);
+					// 	functionAlert("Maps cannot be compared visually when natural breaks classification is selected. " +
+					//   "Because natural breaks focuses on the recise distribution of each attribute along the number line.");
+					// }else if(buttonid == "eqIntButton"){
+					// 	$(".container").fadeOut(200);
+					// 	functionAlert("When equal interval classification is selected, all maps should be"
+					// 	+ " in the same scale (e.g., percentage) and have the same range (min-max values) to be comparable.");
+					// }
 
 					current_scale = d.scale;
 					rescale(polygons);
@@ -371,6 +371,8 @@
 						// .attr("transform", "translate(" + margin.left + "," + margin.top + ") rotate("+ 0 +")");
 
 					}); // end for each
+					rescale(polygons);
+
 				});
 
 				function recalculateAttribute(attribute, multiplyby, divideby) {
@@ -480,6 +482,10 @@
 
 					var naturalbreaks = ss.ckmeans(data, color_scale.length).map(v => v.pop())
 					jenks_scale.domain(naturalbreaks).range(color_scale);
+				}
+
+				function setHistogramScales(data){
+					var max = d3.max(data), min = d3.min(data);
 					linear_scale.domain([min, max]).range(color_scale);
 					hist_scale.domain([min, max]);			// set the histogram up dynamically
 				}
