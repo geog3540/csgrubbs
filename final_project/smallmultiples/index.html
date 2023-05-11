@@ -28,7 +28,7 @@
 		<div class="container container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="https://geog3540.github.io/csgrubbs/index.html">Caitlyn's Final Project</a>
+				<a class="navbar-brand" href="https://geog3540.github.io/csgrubbs/index.html">Home</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="defaultNavbar1">
@@ -59,6 +59,13 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<p>Data from <a href="data.cms.gov">Data.CMS.gov</a>, maps by Caitlyn Grubbs.</p>
+					<div class="col-lg-9">
+					<!-- Change the map description below-->
+					<p>The following six change maps show seasonal variation in the increases and decreases in the levels of E.coli in Iowa watersheds.
+						The first two correspond to the pre-planting season, the second two to the growing season, and the last two to the post-havest season.
+						There is a lot of variation in E.coli concentration changes both spatially throughout the state and temporally throughout the seasons, indicating
+					a complicated process that is not fully captured by one attribute. </p>
+				</div>
 				</div>
 				<div class='col-sm-8 mapButtons'>
 					<span class="pull-right">
@@ -80,6 +87,7 @@
 				</div>
 			</div>
 			<br />
+
 			<div class="row">
 				<div class="col-sm-6">
 					<span><p><h3 class='mapTitle'>All Providers Rate</h3><p>Number of all providers per 10,000 persons in the population.</p></span>
@@ -253,16 +261,16 @@
 				d3.select(d.btn).on('click', function() {
 					d3.selectAll('.btn').classed('active', false);
 					d3.select(this).classed('active', true);
-					var buttonid = d3.select(this).node().id;
-					if(buttonid == "ckmButton"){
-						$(".container").fadeOut(200);
-						functionAlert("Maps cannot be compared visually when natural breaks classification is selected. " +
-					  "Because natural breaks focuses on the recise distribution of each attribute along the number line.");
-					}else if(buttonid == "eqIntButton"){
-						$(".container").fadeOut(200);
-						functionAlert("When equal interval classification is selected, all maps should be"
-						+ " in the same scale (e.g., percentage) and have the same range (min-max values) to be comparable.");
-					}
+					// var buttonid = d3.select(this).node().id;
+					// if(buttonid == "ckmButton"){
+					// 	$(".container").fadeOut(200);
+					// 	functionAlert("Maps cannot be compared visually when natural breaks classification is selected. " +
+					//   "Because natural breaks focuses on the recise distribution of each attribute along the number line.");
+					// }else if(buttonid == "eqIntButton"){
+					// 	$(".container").fadeOut(200);
+					// 	functionAlert("When equal interval classification is selected, all maps should be"
+					// 	+ " in the same scale (e.g., percentage) and have the same range (min-max values) to be comparable.");
+					// }
 
 					current_scale = d.scale;
 					rescale(polygons);
@@ -371,6 +379,8 @@
 						// .attr("transform", "translate(" + margin.left + "," + margin.top + ") rotate("+ 0 +")");
 
 					}); // end for each
+					rescale(polygons);
+
 				});
 
 				function recalculateAttribute(attribute, multiplyby, divideby) {
@@ -480,6 +490,10 @@
 
 					var naturalbreaks = ss.ckmeans(data, color_scale.length).map(v => v.pop())
 					jenks_scale.domain(naturalbreaks).range(color_scale);
+				}
+
+				function setHistogramScales(data){
+					var max = d3.max(data), min = d3.min(data);
 					linear_scale.domain([min, max]).range(color_scale);
 					hist_scale.domain([min, max]);			// set the histogram up dynamically
 				}
