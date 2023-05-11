@@ -120,7 +120,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = '../smallmultiplespctchange/data/pct_change_updated_horizontal.geojson'
+	var polygonJSONFile = '../smallmultiplespctchange/data/pct_change_updated_horizontal2.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
 	// var projection = d3.geoTransverseMercator();
@@ -176,10 +176,10 @@
 	var chartWidth = d3.select('#divMap1')
 	.node().getBoundingClientRect().width,
 	chartHeight = chartWidth * widthheightRatio;
-	var margin = {top: 15, right: 20, bottom: 10, left:20},
+	var margin = {top: 10, right: 20, bottom: 10, left:20},
 	width = chartWidth - margin.right - margin.left,
 	height = chartHeight - margin.top - margin.bottom,
-	histHeight = (chartHeight * .5);
+	histHeight = (chartHeight * .25);
 
 	// Save scales as global scale variables
 	//TODO: fix the classifications
