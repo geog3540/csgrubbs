@@ -275,6 +275,7 @@
 			d3.select('#classDropdown').on('input', function() {
 				rescale(polygons);
 			});
+			rescale(polygons);
 
 			// For each input attribute make a map and a histogram
 			charts.forEach(function(d) {
@@ -283,7 +284,6 @@
 
 				var hist_var = polygons.features.filter(function(e) { return +e.properties[dependent]; })
 				.map(function(e) { return +e.properties[dependent]; });
-				setScales(hist_var);
 				setHistogramScales(hist_var);
 
 				// set histogram
