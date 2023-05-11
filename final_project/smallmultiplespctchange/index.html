@@ -28,7 +28,7 @@
 		<div class="container container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="https://geog3540.github.io/csgrubbs/index.html">Caitlyn's Final Project</a>
+				<a class="navbar-brand" href="https://geog3540.github.io/csgrubbs/index.html">Home</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="defaultNavbar1">
@@ -59,7 +59,11 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<p>Data from <a href="data.cms.gov">Data.CMS.gov</a>, maps by Caitlyn Grubbs.</p>
+					<div class="col-lg-9">
+					<!-- Change the map description below-->
+					<p>The following three maps show show the percent change of medical providers (MD, DO, NP, and PAs) over 2 year intervals by county. </p>
 				</div>
+			</div>
 				<div class='col-sm-8 mapButtons'>
 					<span class="pull-right">
 						<b>Classes:  </b>
@@ -263,7 +267,7 @@
 					// 	functionAlert("When equal interval classification is selected, all maps should be"
 					// 	+ " in the same scale (e.g., percentage) and have the same range (min-max values) to be comparable.");
 					// }
-//
+
 					current_scale = d.scale;
 					rescale(polygons);
 				});
@@ -371,6 +375,8 @@
 						// .attr("transform", "translate(" + margin.left + "," + margin.top + ") rotate("+ 0 +")");
 
 					}); // end for each
+					rescale(polygons);
+
 				});
 
 				function recalculateAttribute(attribute, multiplyby, divideby) {
@@ -480,6 +486,10 @@
 
 					var naturalbreaks = ss.ckmeans(data, color_scale.length).map(v => v.pop())
 					jenks_scale.domain(naturalbreaks).range(color_scale);
+				}
+
+				function setHistogramScales(data){
+					var max = d3.max(data), min = d3.min(data);
 					linear_scale.domain([min, max]).range(color_scale);
 					hist_scale.domain([min, max]);			// set the histogram up dynamically
 				}
