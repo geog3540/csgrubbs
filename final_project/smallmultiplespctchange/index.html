@@ -120,7 +120,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = '../smallmultiplespctchange/data/pct_change.geojson'
+	var polygonJSONFile = '../smallmultiplespctchange/data/pct_change_updated_horizontal.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
 	// var projection = d3.geoTransverseMercator();
@@ -144,10 +144,10 @@
 	// att1format: enter the d3.format string to display the variables in the format you like
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
-	var att1 = 'pct_change', att1alias = 'Percent of change for all providers from 2015 to 2017', att1format = '.2f',
-	att2 = 'pct_chan_3', att2alias =  'Percent of change for all providers from 2017 to 2019', att2format = '.2f',
-	att3 = 'pct_chan_6', att3alias = 'Percent of change for all providers from 2019 to 2021', att3format = '.2f',
-	att4 = 'pct_chan_9', att4alias = 'Percent of change for all providers from 2021 to 2023', att4format = '.2f';
+	var att1 = 'all_pct_change_updated_horizontal_pct_change_all17', att1alias = 'Percent of change for all providers from 2015 to 2017', att1format = '.2f',
+	att2 = 'all_pct_change_updated_horizontal_pct_change_all19', att2alias =  'Percent of change for all providers from 2017 to 2019', att2format = '.2f',
+	att3 = 'all_pct_change_updated_horizontal_pct_change_all21', att3alias = 'Percent of change for all providers from 2019 to 2021', att3format = '.2f',
+	att4 = 'all_pct_change_updated_horizontal_pct_change_all23', att4alias = 'Percent of change for all providers from 2021 to 2023', att4format = '.2f';
 
   // enter below all variables that should be normalized. If you would like to multiple the variables
 	// with a constant value enter them in multiplyBy array. If there is no need for multiplication,
