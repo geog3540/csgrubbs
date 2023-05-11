@@ -492,13 +492,19 @@
 				}
 
 				function rescale(data) {
+
+					allVariables = [];
 					// function to restyle all of the maps
 					charts.forEach(function(d) {
 						var hist_var = data.features.filter(function(e) { return +e.properties[d.var]; })
 						.map(function(e) { return +e.properties[d.var]; });
 
-						// Set scale for each chart (diff vars)
-						setScales(hist_var);
+						// Set scale for each chart (diff vars)\
+						//TODO: change here
+						//setScales(hist_var);
+						setHistogramScales(hist_var);
+
+						allVariables = allVariables.concat(hist_var);
 						// map polygons
 						var map = d3.select(d.map).selectAll('.polygons')
 						.transition(250)
@@ -520,6 +526,10 @@
 
 						d3.select(d.map).select('.legendQuant').call(holdLegend.scale(current_scale));
 					});
+
+					// add all variables together to make the legend.
+					setScales(allVariables);
+
 				} // end rescale, apply to buttons
 
 				function functionAlert(msg, myYes) {
