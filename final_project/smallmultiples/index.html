@@ -122,7 +122,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = '../smallmultiples/data/midwest_rates.geojson'
+	var polygonJSONFile = 'C:/Users/caitl/Documents/GitHub/csgrubbs/final_project/smallmultiples/data/midwest_rates.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
 	// var projection = d3.geoTransverseMercator();
@@ -277,6 +277,7 @@
 			d3.select('#classDropdown').on('input', function() {
 				rescale(polygons);
 			});
+			rescale(polygons);
 
 			// For each input attribute make a map and a histogram
 			charts.forEach(function(d) {
@@ -285,7 +286,7 @@
 
 				var hist_var = polygons.features.filter(function(e) { return +e.properties[dependent]; })
 				.map(function(e) { return +e.properties[dependent]; });
-				setScales(hist_var);
+				setHistogramScales(hist_var);
 
 				// set histogram
 				var currentBins = bins.domain(linear_scale.domain())(hist_var);
