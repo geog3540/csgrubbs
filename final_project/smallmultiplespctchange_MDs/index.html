@@ -120,7 +120,7 @@
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////
 		// TODO: Change the variables below to customize the small multiples interface for your data
-		var polygonJSONFile = 'C:/Users/caitl/Documents/GitHub/csgrubbs/final_project/small_multiplespctchange_MDs/data/county.geojson'
+		var polygonJSONFile = '../small_multiplespctchange_MDs/data/county.geojson'
 		// change the projection if needed *d3.geoAlbers()*
 		var projection = d3.geoAlbers();
 		// var projection = d3.geoTransverseMercator();
@@ -132,7 +132,7 @@
 		var legendX = 0.84, legendY = 0.5
 
 		// id attribute and the name attribute to be used in the tooltip
-		var idAttribute = 'FIPS', nameAttribute = 'name';
+		var idAttribute = 'FIPS', nameAttribute = 'NAME';
 
 		// Find the abbreviations of color names from https://colorbrewer2.org/
 		var colors =  colorbrewer.RdBu;
