@@ -58,15 +58,21 @@
       </h1>
 
       <p class="card-text">
-      SomViz is a visualization method that allows the user to observe connections within multivariate datasets. In this utilization, the average monthly changes in E.coli concentrations from March to November are examined in relation to
-    the swine densities (animal unit per square mile) of several different swine phases (wean, nurse, grow, and total). The definitions and labels used in the vizualization are found below. </p>
+      SomViz is a visualization tool that can be used to display and analyze multivariate data, by clustering data by groups that are similar across the variables. The order of the variables on the Parallel Coordinate Plot is organized by importants/ variables that drive the similarities/differences between the groupings. 
+        Then the magnitude of similarity among these clusters is represented over the grid system. Overall, the similar colors represent more similar clustering. In the grid, the color of plane (grey darkness/lightness) represents how dissimmilar the groups are from one another with darker being less similar than the hexagons around it. The size of the colored circles
+      indicates the amount of counties that are within that color clustering. </p>
 
   <ul>
-    <li> <b>totalswineau:</b> Total swine animal units/square mile</li>
-      <li><b>growswineau:</b> Grow swine animal units/square mile (The last stage before the pigs reach market weight is the grow category)</li>
-        <li><b>nurseswineau:</b> Nurse swine animal units/square mile (Piglets are moved to a sperate confinement barn for nursing)</li>
-          <li><b>weanswineau:</b> Wean swine animal units/square mile (Piglets are typically weaned 2-3 weeks after birth from isolated pens)</li>
-            <li><b>Monthly ranges:</b> Net change in E.coli concentrations from the first month to the second month listed</li>
+    <p class="card-text"> <b>Variables: </b></p>
+    <li> <b>NPPA_chang:</b> Percent change from 2015 - 2023 for midlevel providers (NPs and PAs) </li>
+      <li><b>all_change:</b> Percent change from 2015 - 2023 for all medical providers (MDs, DOs, NPs, and PAs) </li>
+        <li><b>MDDO_chang:</b> Percent change from 2015 - 2023 for physicians (MDs and DOs) </li>
+          <li><b>population:</b> The number of residents that reside in each county according to the 2020 census</li>
+            <li><b>median_age:</b> The median age of the residents within each county</li>
+              <li><b>pct_hispan:</b> The percent of the population that identifies as hispanic according to the 2020 census</li>
+                <li><b>pct_other:</b> The percent of the population within each county that identifies as American Indian/Alaskan Native, Hawaiian/Pacific Islander, Asian, Multiple Races, or Other according to the 2020 census</li>
+                  <li><b>pct_uninsu:</b> The percent of the population that does not have health insurance according to the 2020 census</li>
+                    <li><b>pct_female:</b> The percent of the population that is female according to the 2020 census</li>
 
 
       </ul>
