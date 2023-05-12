@@ -79,12 +79,32 @@
         <div class="row">
           <div class="col-lg-9">
             <!-- Change the map description below-->
-            <p>The map displays medical provider rates and demographic variables of counties in the Midwest states of Iowa, Minnesota, and Wisconsin in a multivariate manner.
-              The parallel coordinates and map combination allows you the user to interact with the counties and their associated variables.</p>
+            <p>The map displays the 2023 medical provider rates and demographic variables of counties in the Midwest states of Iowa, Minnesota, and Wisconsin 
+              in a multivariate manner. The parallel coordinates and map combination allows you the user to interact with the counties and their associated variables. 
+              The variables and rates are normalized by population size per 10,000 persons, where appropriate. </p>
               <ul>
                   <li>There are three primary points of interaction; brushing parallel coordinate axes, the dropdown attribute selection, and the map hovering.
                     Each of these interactive tools enable you to view the data by zooming and filtering to learn more about each counties and compare them. </li>
+                 <li>In this map you can select a variable to see on the choropleth map. You can hover over the counties in the choropleth map and the coordinate 
+                   plot that corresponds to that county will highlight. Highlight a range of a variable on the parallel coordinate plot and those counties will 
+                   highlight on the map. More than one variable can be selected and it will find the counties that fits both ranges. </li>
                   </ul>
+            
+            <ul>
+    <p class="card-text"> <b>Variables: </b></p>
+    <li><b>all_rate:</b> The rate of all providers in 2023 for 10,000 persons per county.  (MDs, DOs, NPs, and PAs) </li>
+       <li><b>MDDO_rate:</b> The rate of physicians in 2023 for 10,000 persons per county.   (MDs and DOs) </li>
+         <li> <b>NPPA_rate:</b> The rate of midlevel providers in 2023 for 10,000 persons per county.  (NPs and PAs) </li>
+           <li><b>pct_uninsu:</b> The percent of the population that does not have health insurance according to the 2020 census</li>
+             <li><b>population:</b> The number of residents that reside in each county according to the 2020 census</li>
+              <li><b>pct_white:</b> The percent of the population that identifies as white/nonhispanic according to the 2020 census</li>
+                <li><b>pct_black:</b> The percent of the population that identifies as black according to the 2020 census</li>
+                  <li><b>pct_hispan:</b> The percent of the population that identifies as hispanic according to the 2020 census</li>
+                    <li><b>pct_male:</b> The percent of the population that is male according to the 2020 census</li>
+                      <li><b>pct_female:</b> The percent of the population that is female according to the 2020 census</li>
+                        <li><b>median_age:</b> The median age of the residents within each county</li>
+
+      </ul>
 
                   <!-- Change the map interpretation below-->
                   <p>Overall, the highest rates of medical providers are in northern Minnesota and Wisconsin.
