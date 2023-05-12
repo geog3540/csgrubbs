@@ -1,52 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Miah's Final Project: Somviz</title>
+  <title>Self Organizing Map Visualization of Provider Changes and Population Demographics in Counties in the Midwest United States </title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Custom styles for this template -->
-    <link href="css/3-col-portfolio.css" rel="stylesheet">
+  <!-- import JQuery and Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  </head>
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
+  <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
 
-  <body>
+  <!-- D3.js -->
+  <link rel="stylesheet" href="css/d3.parcoords.css">
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <!-- D3 legend to make it easier -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.js"></script>
+  <script src="js/d3.parcoords.js"></script>
+  <script src="js/colorbrewer.js"></script>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  target="_blank" rel="noopener noreferrer" href="shortbio.html.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  target="_blank" rel="noopener noreferrer" href="Files\mboyle_CV_3_8_2023.pdf">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mailto:miah-boyle@uiowa.edu">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+</head>
 
+<body>
+  
+  
     <!-- Page Content -->
     <div class="container">
 
